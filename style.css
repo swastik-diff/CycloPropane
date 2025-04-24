@@ -1,0 +1,170 @@
+/* Professional Dark Theme CSS for Login/Registration Page */
+:root {
+    --dark-bg: #07020F;
+    --dark-bg-lighter: #120424;
+    --dark-bg-gradient: linear-gradient(135deg, #07020F, #140330);
+    --purple: #DC00D3;
+    --purple-light: #E66AE1;
+    --purple-transparent: rgba(220, 0, 211, 0.1);
+    --cyan: #0CFAF5;
+    --cyan-light: #7FFBF8;
+    --cyan-transparent: rgba(12, 250, 245, 0.1);
+    --subtle-gradient: linear-gradient(to right, #140330, #0A0218);
+    --accent-gradient: linear-gradient(to right, var(--purple), var(--cyan));
+    --text-white: #f0f0f0;
+    --text-light: #dcdcdc;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+    --transition: all 0.3s ease;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background-color: var(--dark-bg);
+    color: var(--text-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+  
+  .container {
+    width: 100%;
+    max-width: 420px;
+    padding: 20px;
+  }
+  
+  .form-box {
+    background: var(--dark-bg-lighter);
+    border-radius: var(--border-radius);
+    padding: 35px;
+    border: 1px solid rgba(220, 0, 211, 0.3);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+  }
+  
+  .form-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.4);
+    border-color: rgba(12, 250, 245, 0.3);
+  }
+  
+  header {
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 30px;
+    color: var(--cyan);
+    letter-spacing: 0.5px;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+  }
+  
+  .field, .input-box {
+    position: relative;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--purple-light);
+    text-transform: capitalize;
+  }
+  
+  input {
+    width: 100%;
+    padding: 12px 15px;
+    background-color: rgba(7, 2, 15, 0.7);
+    border: 1px solid rgba(12, 250, 245, 0.3);
+    border-radius: var(--border-radius);
+    color: var(--text-white);
+    font-size: 15px;
+    transition: var(--transition);
+    outline: none;
+  }
+  
+  input::placeholder {
+    color: rgba(220, 220, 220, 0.4);
+  }
+  
+  input:focus {
+    border-color: var(--purple);
+    box-shadow: 0 0 0 2px rgba(220, 0, 211, 0.1);
+  }
+  
+  input[type="submit"] {
+    background: var(--accent-gradient);
+    color: var(--dark-bg);
+    cursor: pointer;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+    border: none;
+    padding: 14px;
+    border-radius: var(--border-radius);
+  }
+  
+  .btn {
+    background: var(--accent-gradient);
+  }
+  
+  input[type="submit"]:hover {
+    background: linear-gradient(to right, #C800BF, #0CE0DC);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  input[type="submit"]:active {
+    transform: translateY(0);
+  }
+  
+  .links {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--text-light);
+  }
+  
+  .links a {
+    color: var(--cyan-light);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+  }
+  
+  .links a:hover {
+    color: var(--purple-light);
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 480px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .form-box {
+        padding: 25px;
+    }
+    
+    header {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    input {
+        padding: 12px 14px;
+    }
+  }
